@@ -19,7 +19,6 @@ data <- read.csv("filename.csv")
 
 # Data from package
 data(Boston)
-?Boston
 
 # Info on the data loaded (not from file)
 ?Boston
@@ -27,5 +26,7 @@ data(Boston)
 # data structure
 str(Boston)
 
-
-
+# Basic review of the data
+head(Boston)
+tail(Boston)
+summary(Boston)

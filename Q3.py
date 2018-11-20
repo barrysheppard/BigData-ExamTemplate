@@ -21,7 +21,7 @@ class ClassName(object):
         return 0
 
 # Code under here will only run when we run this file.
-# This stops it running when the tests file is run
+# This stops it running when the test file is run
 
 
 if __name__ == '__main__':
