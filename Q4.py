@@ -28,7 +28,11 @@ if __name__ == '__main__':
     my_object = ClassName()
 
 
+
+
+###############################################################################
 # Sample code is below here. Delete before submitting
+###############################################################################
 
 # Example of map
 a = [1, 2, 3, 4]
@@ -45,7 +49,9 @@ print(list(result))
 
 # Example of reduce
 # Note if you're using python3 (which we are) and a reduce function you need
-# to import reduce from functools.
+# to import reduce from functools. Best practise is include import at top of
+# code with all the other imports
+
 from functools import reduce
 result = reduce(lambda x, y: x+y, [47, 11, 42, 13])
 print(result)

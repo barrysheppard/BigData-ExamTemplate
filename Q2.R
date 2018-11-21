@@ -9,11 +9,15 @@
 
 
 
+###############################################################################
 #### DELETE NOTES BELOW HERE
+###############################################################################
+
+# If in doubt check https://www.statmethods.net/graphs/index.html
 
 ## BARPLOTS
 
-# Prepare data
+# Prepare data for barplot
 counts <- table(mtcars$gear)
 # Simple Bar Plot
 barplot(counts)
@@ -48,17 +52,20 @@ barplot(counts,
         legend = rownames(counts)
 )
 
+###############################################################################
 # Scatter Plots
 
 # Simple Scatterplot. Y ~ X
-plot(mtcars$mpg ~ mtcars$wt)
+plot(mpg ~ wt, data=mtcars)
 
 # Add fit lines
-abline(lm(mtcars$mpg~mtcars$wt), col="red") # regression line (y~x)
+abline(lm(mpg~wt, data=mtcars), col="red") # regression line (y~x)
 lines(lowess(mtcars$wt, mtcars$mpg), col="blue") # lowess line (x,y)
 
 # Simple Scatterplot changing dots to triangles
-plot(mtcars$mpg ~ mtcars$wt, pch=2)
+plot(mpg ~ wt, data=mtcars,
+     pch=2
+)
 
 # pch = 0,square
 # pch = 1,circle
@@ -89,3 +96,22 @@ plot(mtcars$mpg ~ mtcars$wt, pch=2)
 # Bonus Extra
 # pch = "B" # Any single character can be used in quotes
 # cex - 2 # This will double the size of the dot
+
+
+###############################################################################
+# Boxplot
+boxplot(mpg~cyl,data=mtcars)
+
+# Histogram
+hist(mtcars$mpg)
+
+# Histogram with Different Number of Bins
+hist(mtcars$mpg,
+     breaks=12
+)
+
+# Kernel Density Plot
+d <- density(mtcars$mpg) # returns the density data 
+plot(d)
+
+
